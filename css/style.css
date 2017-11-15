@@ -1,0 +1,513 @@
+/*-----------------
+Global Elements CSS
+-------------------*/
+h1, h2, h3 {
+  color: #3F0252!important;
+}
+
+
+/*-----------------
+Navbar CSS
+-------------------*/
+.navbar-default {
+  background-color: rgb(255,255,255)!important;
+  height: 170px;
+  width: 100%;
+
+  position: fixed!important;
+  z-index: 5;
+
+  transition: .5s;
+}
+
+.navbar {
+  margin-bottom: -1.4em!important;
+  border-radius: 0px!important;
+  border-bottom: none!important;
+}
+
+.navbar-right {
+  margin-top: 5.4em!important;
+  transition: .5s;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #555;
+    background: none!important;
+    border-bottom: solid 5px #000;
+}
+
+#logo {
+  width: 100px;
+  transition: .5s;
+}
+
+#myNavbar ul li a {
+  transition: .5s;
+}
+
+#myNavbar ul li a:hover {
+  border-bottom: solid 5px #000;
+}
+
+
+/*-----------------
+Parallax CSS
+-------------------*/
+.parallax {
+    /* The image used */
+    background-image: url("http://melissachartan.com/wp-content/uploads/2014/07/Smiling-woman.jpg");
+
+    /* Set a specific height */
+    height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxContent h1{
+  position: relative;
+  left: 4em;
+  top: 6em;
+  color: #fff!important;
+  font-size: 5em;
+  text-shadow: 0px 3px 10px #000;
+  display: inline;
+}
+
+.borderRadiusAnim {
+    border-bottom-right-radius: 45%;
+    -webkit-animation: mymove 1s; /* Chrome, Safari, Opera */
+    animation: mymove 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    0% {border-bottom-right-radius: 0%;}
+    50% {border-bottom-right-radius: 45%;}
+    100% {border-bottom-right-radius: 45%;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    00% {border-bottom-right-radius: 0%;}
+    50% {border-bottom-right-radius: 45%;}
+    100% {border-bottom-right-radius: 45%;}
+}
+
+.animatedButton img {
+  position: absolute;
+  left: 47%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 100px;
+
+  width: 150px;
+
+  -webkit-filter: drop-shadow(0px 5px 5px #222);
+  filter:         drop-shadow(0px 5px 5px #222);
+}
+
+.floating2{
+	animation-name: floating2;
+	-webkit-animation-name: floating2;
+
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating2 {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(5%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes floating2 {
+	0% {
+		-webkit-transform: translateY(0%);
+	}
+	50% {
+		-webkit-transform: translateY(5%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+	}
+}
+
+/*-----------------
+About CSS
+-------------------*/
+.about{
+  text-align: center;
+  padding: 10em 5em;
+}
+
+.about p {
+  text-align: left;
+}
+
+.about a p{
+  text-align: center;
+  display: inline-block;
+  background-color: #80B987;
+  padding: 10px 20px;
+  color: #fff;
+  transition: .5s;
+}
+
+.about a p:hover {
+  background-color: #4D6B50;
+}
+
+.about a:hover {
+  text-decoration: none;
+}
+
+/*-----------------
+Product CSS
+-------------------*/
+.product {
+  text-align: center;
+  padding: 10em 5em;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#80B987, #FFF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#80B987, #FFF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#80B987, #FFF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#80B987, #FFF); /* Standard syntax */
+  overflow-y: hidden;
+overflow-x: hidden;
+
+border-top-left-radius: 45%!important;
+}
+
+.product h2 {
+  text-align: center;
+}
+
+.product .subNav {
+  padding-top: 20px;
+  padding-BOTTOM: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.product .subNav p{
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+
+#textContent h3, p{
+  text-align: left;
+}
+
+#textContent a p {
+  text-align: right;
+  display: inline-block;
+  background-color: #80B987;
+  padding: 10px 20px;
+  color: #fff;
+  transition: .5s;
+}
+
+#textContent a p:hover {
+  background-color: #4D6B50;
+}
+
+.row2 {
+  display: none;
+}
+
+.row3 {
+  display: none;
+}
+
+.slideRight{
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;
+
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+	}
+	50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-4%);
+	}
+	80%{
+		transform: translateX(4%);
+	}
+	95%{
+		transform: translateX(-2%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(-150%);
+	}
+	50%{
+		-webkit-transform: translateX(8%);
+	}
+	65%{
+		-webkit-transform: translateX(-4%);
+	}
+	80%{
+		-webkit-transform: translateX(4%);
+	}
+	95%{
+		-webkit-transform: translateX(-2%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+.textContent1 {
+  visibility: hidden;
+}
+
+#imgBlock1 {
+  visibility: hidden;
+}
+
+.slideLeft{
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;
+
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+	}
+	50%{
+		transform: translateX(-8%);
+	}
+	65%{
+		transform: translateX(4%);
+	}
+	80%{
+		transform: translateX(-4%);
+	}
+	95%{
+		transform: translateX(2%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		-webkit-transform: translateX(150%);
+	}
+	50%{
+		-webkit-transform: translateX(-8%);
+	}
+	65%{
+		-webkit-transform: translateX(4%);
+	}
+	80%{
+		-webkit-transform: translateX(-4%);
+	}
+	95%{
+		-webkit-transform: translateX(2%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+
+#productFloat {
+  position: absolute;
+  left: 5em;
+  bottom: -25em;
+  z-index: 1;
+  width: 500px;
+}
+
+#productFloat2 {
+  position: absolute;
+  left: 3em;
+  bottom: -25em;
+  z-index: 1;
+  width: 500px;
+}
+
+#productFloat3 {
+  position: absolute;
+  left: 5em;
+  bottom: -25em;
+  z-index: 1;
+  width: 500px;
+}
+
+.floating{
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(3%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translateY(0%);
+	}
+	50% {
+		-webkit-transform: translateY(3%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+	}
+}
+
+#circle {
+  position: absolute;
+  left: -3em;
+  top: -3em;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(63,2,82, 1), #FFF);
+  box-shadow: 0 0 0 rgba(63,2,82, 0.7);
+  animation: pulse 2s infinite;
+}
+
+#circle2 {
+  position: absolute;
+  left: 0em;
+  top: -3em;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(63,2,82, 1), #FFF);
+  box-shadow: 0 0 0 rgba(63,2,82, 0.7);
+  animation: pulse 2s infinite;
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(63,2,82, 0.7);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 30px rgba(63,2,82, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(63,2,82, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(63,2,82, 0.7);
+    box-shadow: 0 0 0 0 rgba(63,2,82, 0.7);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 30px rgba(63,2,82, 0);
+      box-shadow: 0 0 0 30px rgba(63,2,82, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(63,2,82, 0);
+      box-shadow: 0 0 0 0 rgba(63,2,82, 0);
+  }
+}
+
+/*-----------------
+homeForm CSS
+-------------------*/
+.homeForm {
+padding: 10em 5em;
+text-align: center;
+}
+
+.homeForm h2{
+  padding-bottom: 1em;
+}
+
+.homeForm input {
+  margin-bottom: 2.5em;
+}
+
+.homeForm button {
+  background-color: #80B987;
+  border: none;
+  border-radius: 0px;
+  padding: 10px 20px;
+  color: #fff;
+  transition: .5s;
+}
+.homeForm button:hover {
+  background-color: #4D6B50;
+  color: #fff;
+}
+
+/*-----------------
+homeForm CSS
+-------------------*/
+
+footer {
+  background-color: #80B987;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.footer {
+  display: flex;
+}
+
+.footerCol {
+  flex: 1;
+}
