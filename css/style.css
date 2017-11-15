@@ -5,6 +5,14 @@ h1, h2, h3 {
   color: #3F0252!important;
 }
 
+.subContainer {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 
 /*-----------------
 Navbar CSS
@@ -16,14 +24,17 @@ Navbar CSS
 
   position: fixed!important;
   z-index: 5;
+  top: 0em;
 
-  transition: .5s;
+  display: none;
 }
 
 .navbar {
   margin-bottom: -1.4em!important;
   border-radius: 0px!important;
   border-bottom: none!important;
+
+  transition: .5s;
 }
 
 .navbar-right {
@@ -66,6 +77,8 @@ Parallax CSS
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
+
+    margin-top: -1.4em;
 }
 
 .parallaxContent h1{
@@ -75,7 +88,14 @@ Parallax CSS
   color: #fff!important;
   font-size: 5em;
   text-shadow: 0px 3px 10px #000;
-  display: inline;
+  display: none;
+}
+
+.parallaxLogo {
+  position: relative;
+  top: 8em;
+  left: 10%;
+  display: none;
 }
 
 .borderRadiusAnim {
@@ -109,6 +129,8 @@ Parallax CSS
 
   -webkit-filter: drop-shadow(0px 5px 5px #222);
   filter:         drop-shadow(0px 5px 5px #222);
+
+  display: none;
 }
 
 .floating2{
@@ -146,6 +168,19 @@ Parallax CSS
 	}
 }
 
+@media only screen and (max-width: 1280px) {
+  	.animatedButton img {
+    	  position: absolute;
+    	  left: 45%;
+    }
+
+    .parallaxContent h1{
+      position: relative;
+      left: 2em;
+      top: 6em;
+      font-size: 3em;
+    }
+}
 /*-----------------
 About CSS
 -------------------*/
@@ -154,8 +189,14 @@ About CSS
   padding: 10em 5em;
 }
 
+.about h2 {
+  padding-bottom: 1em;
+}
+
 .about p {
   text-align: left;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .about a p{
@@ -165,6 +206,7 @@ About CSS
   padding: 10px 20px;
   color: #fff;
   transition: .5s;
+  margin-top: 1em;
 }
 
 .about a p:hover {
@@ -192,13 +234,18 @@ overflow-x: hidden;
 border-top-left-radius: 45%!important;
 }
 
+.productHeader {
+  position: relative;
+  bottom: 6em;
+}
+
 .product h2 {
   text-align: center;
 }
 
 .product .subNav {
   padding-top: 20px;
-  padding-BOTTOM: 20px;
+  padding-bottom: 20px;
   position: relative;
   z-index: 3;
 }
@@ -208,8 +255,23 @@ border-top-left-radius: 45%!important;
   text-align: center;
   margin-right: 20px;
   margin-left: 20px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  border-bottom: solid 5px #fff;
+
+  font-size: 16px;
+  color: #3F0252;
 }
 
+.product .subNav p:hover {
+  cursor: pointer;
+  border-bottom: solid 5px #000;
+}
+
+.activeLink {
+  border-bottom: solid 5px #000!important;
+}
 
 #textContent h3, p{
   text-align: left;
@@ -479,6 +541,8 @@ text-align: center;
 
 .homeForm input {
   margin-bottom: 2.5em;
+  width: 500px;
+  margin: auto;
 }
 
 .homeForm button {

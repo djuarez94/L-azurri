@@ -44,6 +44,10 @@ Product 1 Click
 
     $(".textContent1").addClass("slideLeft");
     $("#imgBlock1").addClass("slideRight");
+
+    $("#productLink1").addClass("activeLink");
+    $("#productLink2").removeClass("activeLink");
+    $("#productLink3").removeClass("activeLink");
 	});
 
 /*------------------------------
@@ -57,6 +61,10 @@ Product 2 Click
 
     $(".textContent2").addClass("slideRight");
     $("#imgBlock2").addClass("slideLeft");
+
+    $("#productLink2").addClass("activeLink");
+    $("#productLink1").removeClass("activeLink");
+    $("#productLink3").removeClass("activeLink");
 
     $("#productFloat2").addClass("floating");
 	});
@@ -72,6 +80,10 @@ Product 3 Click
 
       $(".textContent3").addClass("slideLeft");
       $("#imgBlock3").addClass("slideRight");
+
+      $("#productLink3").addClass("activeLink");
+      $("#productLink2").removeClass("activeLink");
+      $("#productLink1").removeClass("activeLink");
 
       $("#productFloat3").addClass("floating");
   	});
@@ -104,11 +116,22 @@ More Button Click Effect
 
     $(".animatedButton").hover(function() {
     $(".parallax").addClass("borderRadiusAnim");
+    // $(".subContainer").show();
   });
 
   $(".animatedButton").click(function() {
   $(".parallax").addClass("borderRadiusAnim");
+  $(".subContainer").show();
 });
+
+/*-------------------------------------
+| Parallax Anime Fade In
+-------------------------------------*/
+$(".parallaxLogo").fadeIn(1000, function(){
+            $(".parallaxLogo").delay(2000).fadeOut();
+        });
+$(".parallaxContent h1").delay(3500).fadeIn();
+$(".animatedButton img").delay(5000).fadeIn();
 
 /*-------------------------------------
 | Smooth Scroll
