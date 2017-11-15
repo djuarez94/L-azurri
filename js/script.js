@@ -116,7 +116,7 @@ More Button Click Effect
 
     $(".animatedButton").hover(function() {
     $(".parallax").addClass("borderRadiusAnim");
-    // $(".subContainer").show();
+    $(".subContainer").fadeIn();
   });
 
   $(".animatedButton").click(function() {
