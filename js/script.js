@@ -94,15 +94,15 @@ Navbar Scroll Effect
 
     $(document).on("scroll", function() {
 
-    	if($(document).scrollTop()>100) {
-    		document.querySelector(".navbar").setAttribute("style", "height: 100px; display: block;");
+    	if($(document).scrollTop()>600) {
+    		document.querySelector(".navbar").setAttribute("style", "height: 100px; opacity: 1;");
 
 
     		document.querySelector("#logo").setAttribute("style", "width: 70px; margin-top: -.5em;");
     		document.querySelector(".navbar-right").setAttribute("style", "margin-top: 2.4em!important;");
     	}
       else {
-    		document.querySelector(".navbar").setAttribute("style", "height: 170px; display: none;");
+    		document.querySelector(".navbar").setAttribute("style", "height: 170px; opacity: 0;");
 
         document.querySelector("#logo").setAttribute("style", "width: 100px; margin-top: 0em;");
         document.querySelector(".navbar-right").setAttribute("style", "margin-top: 5.4em!important;");
@@ -128,10 +128,13 @@ More Button Click Effect
 | Parallax Anime Fade In
 -------------------------------------*/
 $(".parallaxLogo").fadeIn(1000, function(){
-            $(".parallaxLogo").delay(2000).fadeOut();
-        });
+            $(".parallaxLogo").delay(2000).fadeOut(function(){
+              $(".parallax").addClass("noParallaxOverlay");
+            });
+
+        })
 $(".parallaxContent h1").delay(3500).fadeIn();
-$(".animatedButton img").delay(5000).fadeIn();
+$(".animatedButton img").delay(6000).fadeIn();
 
 /*-------------------------------------
 | Smooth Scroll
@@ -143,4 +146,20 @@ $(".animatedButton img").delay(5000).fadeIn();
     }
 
     $(".animatedButton").click(scroll2About);
+
+/*-------------------------------------
+| Parallax H1 Animation
+-------------------------------------*/
+    var text = ["\"Skin care requires commitment, not a miracle.\"", "\"I’m a big believer in that if you focus on good skincare, you really won’t need a lot of make-up.\"", "\"I cleanse my face no matter how tired I am or how many martini’s I’ve had that night\""];
+    var counter = 0;
+    var elem = document.getElementById("changeText");
+    setInterval(change, 5000);
+
+    function change() {
+      elem.innerHTML = text[counter];
+      counter++;
+      if (counter >= text.length) {
+        counter = 0;
+      }
+    }
 });
